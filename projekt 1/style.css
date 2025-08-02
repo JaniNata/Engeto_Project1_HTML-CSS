@@ -1,0 +1,422 @@
+:root {
+  --nav-color: #33292a;
+  --text-color: #fff;
+  --violet-section-color: #644b4f;
+  --footer-color: #333333;
+  --light-section-color: #f2f2f2;
+  --link-color: #efa69d;
+  --hover-link-color: #e9877b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+}
+
+/* NAVIGATION */
+.navbar {
+  display: flex;
+  background-color: var(--nav-color);
+  height: 10vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+ul {
+  display: none;
+}
+.hamburger {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.hamburger a {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+}
+.hamburger a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+}
+/* NAVIGATION FOR Tablet */
+@media (min-width: 768px) and (max-width: 992px) {
+  ul {
+    display: none;
+  }
+}
+/* NAVIGATION FOR PC*/
+@media only screen and (min-width: 992px) {
+  nav {
+    background-color: var(--nav-color);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  nav li {
+    padding: 10px;
+    text-align: center;
+  }
+  .hamburger a {
+    display: none;
+  }
+
+  a {
+    color: var(--text-color);
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 10px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  background-image: url("images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: block;
+}
+.hero-wrapper {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0;
+}
+.hero-text {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+  text-align: right;
+  color: var(--text-color);
+  font-size: 64px;
+  font-weight: bold;
+}
+
+/* ABOUT US */
+.about {
+  margin-top: 50px;
+}
+.about-text h2 {
+  text-align: left;
+  padding: 20px;
+}
+.about-text p {
+  padding: 20px;
+}
+.about-img {
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.about-img img {
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+}
+
+/* ABOUT US FOR PC */
+@media only screen and (min-width: 992px) {
+  .about-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px 0;
+  }
+  .about-text {
+    width: 50%;
+  }
+  .about-img {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .about-img img {
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+/* WHAT WE DO */
+.info {
+  background-color: var(--nav-color);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.info-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.info-text {
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+  color: var(--text-color);
+  padding: 20px;
+}
+.info-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.info-icons p {
+  color: var(--text-color);
+  font-weight: bold;
+}
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image img {
+  width: 100%;
+}
+
+.text {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.icons-container {
+  max-width: 150px;
+  flex-basis: 50px;
+  flex-grow: 1;
+}
+.icons-container img {
+  width: 70%;
+  height: 20%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+/* WHAT WE DO FOR PC */
+@media only screen and (min-width: 992px) {
+  .info-icons {
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .info-text {
+    width: 70%;
+  }
+  .icons-container img {
+    width: 70%;
+    height: 20%;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+}
+
+/* GALLERY */
+.gallery {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  gap: 15px;
+}
+.grid-text {
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  background-color: lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* GALLERY FOR PC */
+@media only screen and (min-width: 992px) {
+  .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-container {
+    width: 70%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .grid-text {
+    font-weight: bold;
+    font-size: 28px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* WHERE DO YOU WANT TO GO */
+.contact {
+  background-color: var(--violet-section-color);
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.contact-wrapper {
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.contact-left-block {
+  color: var(--text-color);
+  text-align: left;
+  padding: 20px;
+}
+.contact-right-block {
+  color: var(--text-color);
+  padding: 20px;
+  text-align: left;
+}
+.contact-btn {
+  margin-top: 50px;
+  display: inline-block;
+  padding: 1rem;
+  color: white;
+  background-color: lightgray;
+  border-radius: 5%;
+  text-decoration: none;
+}
+.contact-btn:hover {
+  text-decoration: underline;
+  color: var(--nav-color);
+}
+/* WHERE DO YOU WANT TO GO FOR PC */
+@media only screen and (min-width: 992px) {
+  .contact-wrapper {
+    display: flex;
+    width: 70%;
+  }
+}
+
+/* REVIEWS */
+.reviews {
+  padding: 50px;
+}
+.review-wrapper {
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+}
+.review-text {
+  text-align: center;
+}
+.review-text h2 {
+  margin-bottom: 30px;
+}
+.reviewers {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.review-img img {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* REVIEWS FOR PC */
+@media only screen and (min-width: 992px) {
+  .review-text {
+    display: flex;
+
+    flex-direction: column;
+  }
+  .review-header {
+    text-align: center;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .review-container {
+    display: flex;
+    gap: 25px;
+  }
+  .review-wrapper {
+    width: 70%;
+  }
+  .review-img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+  }
+}
+
+/* FOUR IMAGES */
+.images-wrapper {
+  width: 100%;
+}
+
+.images-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media only screen and (min-width: 992px) {
+  .four-images {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--footer-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer p {
+  color: var(--text-color);
+  text-align: center;
+}
+.footer-link {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.footer a {
+  color: var(--hover-link-color);
+  text-align: center;
+  margin: auto;
+}
